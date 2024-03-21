@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EHf-IW-A2E">
+            <objects>
+                <viewController id="01J-lp-oVM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="jh6-nH-IOI">
+                                <rect key="frame" x="152.66666666666666" y="382" width="88" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="7El-aa-bfv"/>
+                                    <constraint firstAttribute="width" constant="88" id="IOq-et-wFP"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="88" id="P8u-9s-bVA"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="88" id="XsW-PI-JH4"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_text" translatesAutoresizingMaskIntoConstraints="NO" id="sy6-hm-dNf">
+                                <rect key="frame" x="104.66666666666669" y="746" width="184" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="184" id="gFr-8V-24G"/>
+                                    <constraint firstAttribute="height" constant="32" id="kWR-cy-BoQ"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jh6-nH-IOI" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="FDU-2c-4Cz"/>
+                            <constraint firstItem="jh6-nH-IOI" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="FdV-LV-wyF"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="sy6-hm-dNf" secondAttribute="bottom" constant="40" id="U23-0u-A2u"/>
+                            <constraint firstItem="sy6-hm-dNf" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="fRd-Ri-Gl4"/>
+                            <constraint firstItem="jh6-nH-IOI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="kgh-mX-FFR"/>
+                            <constraint firstItem="sy6-hm-dNf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="6" id="u4K-5F-ydA"/>
+                            <constraint firstItem="jh6-nH-IOI" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zqh-Lu-eD9"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="logo" width="88" height="88"/>
+        <image name="logo_text" width="184" height="21"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
