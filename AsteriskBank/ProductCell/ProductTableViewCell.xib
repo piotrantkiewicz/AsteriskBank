@@ -12,6 +12,10 @@
             <rect key="frame" x="0.0" y="0.0" width="398" height="82"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="axH-ax-SLj">
+                    <rect key="frame" x="0.0" y="0.0" width="398" height="82"/>
+                    <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="252" verticalHuggingPriority="251" image="blackCard" translatesAutoresizingMaskIntoConstraints="NO" id="C71-iz-e8K">
                     <rect key="frame" x="16" y="20" width="64" height="41"/>
                 </imageView>
@@ -31,10 +35,14 @@
             <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="C71-iz-e8K" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="98p-L7-xrH"/>
+                <constraint firstAttribute="bottom" secondItem="axH-ax-SLj" secondAttribute="bottom" id="JwB-UJ-wZR"/>
                 <constraint firstAttribute="trailing" secondItem="rfh-2c-jxT" secondAttribute="trailing" constant="16" id="NVk-LC-LOW"/>
                 <constraint firstItem="C71-iz-e8K" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="R7a-EA-eSV"/>
+                <constraint firstItem="axH-ax-SLj" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="W3b-Tl-bLj"/>
                 <constraint firstItem="rfh-2c-jxT" firstAttribute="top" secondItem="UNX-jT-4B1" secondAttribute="bottom" constant="2" id="Yrt-Um-QBi"/>
                 <constraint firstItem="rfh-2c-jxT" firstAttribute="leading" secondItem="C71-iz-e8K" secondAttribute="trailing" constant="16" id="Z6Q-a8-c4X"/>
+                <constraint firstAttribute="trailing" secondItem="axH-ax-SLj" secondAttribute="trailing" id="eig-tv-VHD"/>
+                <constraint firstItem="axH-ax-SLj" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="gcN-x1-dv0"/>
                 <constraint firstItem="UNX-jT-4B1" firstAttribute="leading" secondItem="C71-iz-e8K" secondAttribute="trailing" constant="15" id="hWo-f5-Grd"/>
                 <constraint firstItem="UNX-jT-4B1" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="kBe-dC-agH"/>
             </constraints>
