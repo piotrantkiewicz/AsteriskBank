@@ -1,17 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "wwfCard.png",
-      "idiom" : "universal",
-      "scale" : "1x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "2x"
-    },
-    {
-      "idiom" : "universal",
-      "scale" : "3x"
+      "filename" : "wwfCard.pdf",
+      "idiom" : "universal"
     }
   ],
   "info" : {

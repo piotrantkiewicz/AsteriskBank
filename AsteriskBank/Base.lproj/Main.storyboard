@@ -24,7 +24,7 @@
                                 </segments>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="d8E-Cn-U4i">
-                                <rect key="frame" x="16" y="98" width="361" height="754"/>
+                                <rect key="frame" x="16" y="114" width="361" height="738"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -33,7 +33,7 @@
                         <constraints>
                             <constraint firstItem="EGW-M2-LFg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="41J-5i-xzP"/>
                             <constraint firstItem="d8E-Cn-U4i" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-16" id="6B9-kH-jdE"/>
-                            <constraint firstItem="d8E-Cn-U4i" firstAttribute="top" secondItem="EGW-M2-LFg" secondAttribute="bottom" constant="8" symbolic="YES" id="Mho-cc-DvU"/>
+                            <constraint firstItem="d8E-Cn-U4i" firstAttribute="top" secondItem="EGW-M2-LFg" secondAttribute="bottom" constant="24" id="cAY-56-nFb"/>
                             <constraint firstItem="d8E-Cn-U4i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="lCn-5u-J85"/>
                             <constraint firstItem="EGW-M2-LFg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="qa9-YO-v4c"/>
                             <constraint firstAttribute="bottom" secondItem="d8E-Cn-U4i" secondAttribute="bottom" id="v0T-PW-0Md"/>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE9CF5842BB36F37006DB1FD /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = AE9CF5832BB36F37006DB1FD /* products.json */; };
+		AE9CF5862BB375D3006DB1FD /* ProductLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9CF5852BB375D3006DB1FD /* ProductLoader.swift */; };
+		AE9CF5882BB37D33006DB1FD /* ProductCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9CF5872BB37D33006DB1FD /* ProductCategoryViewModel.swift */; };
 		AEA017B02BAB1E2A00AC1C70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA017AF2BAB1E2A00AC1C70 /* AppDelegate.swift */; };
 		AEA017B22BAB1E2A00AC1C70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA017B12BAB1E2A00AC1C70 /* SceneDelegate.swift */; };
 		AEA017B42BAB1E2A00AC1C70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA017B32BAB1E2A00AC1C70 /* ViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE9CF5832BB36F37006DB1FD /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		AE9CF5852BB375D3006DB1FD /* ProductLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLoader.swift; sourceTree = "<group>"; };
+		AE9CF5872BB37D33006DB1FD /* ProductCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryViewModel.swift; sourceTree = "<group>"; };
 		AEA017AC2BAB1E2A00AC1C70 /* AsteriskBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsteriskBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA017AF2BAB1E2A00AC1C70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEA017B12BAB1E2A00AC1C70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +49,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE9CF5892BB37D5A006DB1FD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AEFE874A2BAC520400BED1B7 /* ProductViewModel.swift */,
+				AE9CF5872BB37D33006DB1FD /* ProductCategoryViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		AEA017A32BAB1E2A00AC1C70 = {
 			isa = PBXGroup;
 			children = (
@@ -62,15 +77,17 @@
 		AEA017AE2BAB1E2A00AC1C70 /* AsteriskBank */ = {
 			isa = PBXGroup;
 			children = (
+				AE9CF5892BB37D5A006DB1FD /* Model */,
+				AE9CF5832BB36F37006DB1FD /* products.json */,
 				AEFE87452BAC4C2600BED1B7 /* ProductCell */,
 				AEA017AF2BAB1E2A00AC1C70 /* AppDelegate.swift */,
 				AEA017B12BAB1E2A00AC1C70 /* SceneDelegate.swift */,
-				AEFE874A2BAC520400BED1B7 /* ProductViewModel.swift */,
 				AEA017B32BAB1E2A00AC1C70 /* ViewController.swift */,
 				AEA017B52BAB1E2A00AC1C70 /* Main.storyboard */,
 				AEA017B82BAB1E3600AC1C70 /* Assets.xcassets */,
 				AEA017BA2BAB1E3600AC1C70 /* LaunchScreen.storyboard */,
 				AEA017BD2BAB1E3600AC1C70 /* Info.plist */,
+				AE9CF5852BB375D3006DB1FD /* ProductLoader.swift */,
 			);
 			path = AsteriskBank;
 			sourceTree = "<group>";
@@ -142,6 +159,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9CF5842BB36F37006DB1FD /* products.json in Resources */,
 				AEA017B92BAB1E3600AC1C70 /* Assets.xcassets in Resources */,
 				AEFE87472BAC4C4500BED1B7 /* ProductTableViewCell.xib in Resources */,
 				AEA017BC2BAB1E3600AC1C70 /* Base in Resources */,
@@ -157,7 +175,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEA017B42BAB1E2A00AC1C70 /* ViewController.swift in Sources */,
+				AE9CF5882BB37D33006DB1FD /* ProductCategoryViewModel.swift in Sources */,
 				AEFE87492BAC4C6000BED1B7 /* ProductTableViewCell.swift in Sources */,
+				AE9CF5862BB375D3006DB1FD /* ProductLoader.swift in Sources */,
 				AEA017B02BAB1E2A00AC1C70 /* AppDelegate.swift in Sources */,
 				AEA017B22BAB1E2A00AC1C70 /* SceneDelegate.swift in Sources */,
 				AEFE874B2BAC520400BED1B7 /* ProductViewModel.swift in Sources */,

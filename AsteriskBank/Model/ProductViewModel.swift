@@ -1,6 +1,6 @@
 import Foundation
 
-struct ProductViewModel {
+struct ProductViewModel: Codable {
     let title: String
     let description: String
     let imageName: String
@@ -11,5 +11,11 @@ struct ProductViewModel {
         self.description = description
         self.imageName = imageName
         self.category = category
+    }
+}
+
+extension ProductViewModel {
+    var categoryTitle: String {
+        category.capitalized
     }
 }
