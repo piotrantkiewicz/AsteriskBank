@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class ProductsVC: UIViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
@@ -47,6 +47,7 @@ class ViewController: UIViewController {
     func configureTableView() {
         tableView.separatorColor = .clear
         tableView.dataSource = self
+        tableView.delegate = self
         tableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductTableViewCell")
     }
     
@@ -72,7 +73,7 @@ class ViewController: UIViewController {
     }
 }
 
-extension ViewController: UITableViewDataSource {
+extension ProductsVC: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int { 1 }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -98,5 +99,18 @@ extension ViewController: UITableViewDataSource {
         }
 
         return UITableViewCell()
+    }
+}
+
+extension ProductsVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presentDetails()
+    }
+    
+    private func presentDetails() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let detailsVC = storyboard.instantiateViewController(identifier: "ProductDetailsVC")
+
+            show(detailsVC, sender: self)
     }
 }

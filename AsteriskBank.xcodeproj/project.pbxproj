@@ -7,12 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AE480CC02BBACF0400FC56E9 /* CorneredView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE480CBF2BBACF0400FC56E9 /* CorneredView.swift */; };
+		AE480CC22BBAD51200FC56E9 /* ProductDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE480CC12BBAD51200FC56E9 /* ProductDetailsVC.swift */; };
+		AE4FBCA22BBC363D00AD3DDC /* SpaceGrotesk-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE4FBC9D2BBC363D00AD3DDC /* SpaceGrotesk-Medium.ttf */; };
+		AE4FBCA32BBC363D00AD3DDC /* SpaceGrotesk-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE4FBC9E2BBC363D00AD3DDC /* SpaceGrotesk-Regular.ttf */; };
+		AE4FBCA42BBC363D00AD3DDC /* SpaceGrotesk-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE4FBC9F2BBC363D00AD3DDC /* SpaceGrotesk-Bold.ttf */; };
+		AE4FBCA52BBC363D00AD3DDC /* SpaceGrotesk-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE4FBCA02BBC363D00AD3DDC /* SpaceGrotesk-Light.ttf */; };
+		AE4FBCA62BBC363D00AD3DDC /* SpaceGrotesk-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AE4FBCA12BBC363D00AD3DDC /* SpaceGrotesk-SemiBold.ttf */; };
 		AE9CF5842BB36F37006DB1FD /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = AE9CF5832BB36F37006DB1FD /* products.json */; };
 		AE9CF5862BB375D3006DB1FD /* ProductLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9CF5852BB375D3006DB1FD /* ProductLoader.swift */; };
 		AE9CF5882BB37D33006DB1FD /* ProductCategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9CF5872BB37D33006DB1FD /* ProductCategoryViewModel.swift */; };
 		AEA017B02BAB1E2A00AC1C70 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA017AF2BAB1E2A00AC1C70 /* AppDelegate.swift */; };
 		AEA017B22BAB1E2A00AC1C70 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA017B12BAB1E2A00AC1C70 /* SceneDelegate.swift */; };
-		AEA017B42BAB1E2A00AC1C70 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA017B32BAB1E2A00AC1C70 /* ViewController.swift */; };
+		AEA017B42BAB1E2A00AC1C70 /* ProductsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA017B32BAB1E2A00AC1C70 /* ProductsVC.swift */; };
 		AEA017B72BAB1E2A00AC1C70 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AEA017B62BAB1E2A00AC1C70 /* Base */; };
 		AEA017B92BAB1E3600AC1C70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA017B82BAB1E3600AC1C70 /* Assets.xcassets */; };
 		AEA017BC2BAB1E3600AC1C70 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AEA017BB2BAB1E3600AC1C70 /* Base */; };
@@ -22,13 +29,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		AE480CBF2BBACF0400FC56E9 /* CorneredView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorneredView.swift; sourceTree = "<group>"; };
+		AE480CC12BBAD51200FC56E9 /* ProductDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailsVC.swift; sourceTree = "<group>"; };
+		AE4FBC9D2BBC363D00AD3DDC /* SpaceGrotesk-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-Medium.ttf"; sourceTree = "<group>"; };
+		AE4FBC9E2BBC363D00AD3DDC /* SpaceGrotesk-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-Regular.ttf"; sourceTree = "<group>"; };
+		AE4FBC9F2BBC363D00AD3DDC /* SpaceGrotesk-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-Bold.ttf"; sourceTree = "<group>"; };
+		AE4FBCA02BBC363D00AD3DDC /* SpaceGrotesk-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-Light.ttf"; sourceTree = "<group>"; };
+		AE4FBCA12BBC363D00AD3DDC /* SpaceGrotesk-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SpaceGrotesk-SemiBold.ttf"; sourceTree = "<group>"; };
 		AE9CF5832BB36F37006DB1FD /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		AE9CF5852BB375D3006DB1FD /* ProductLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductLoader.swift; sourceTree = "<group>"; };
 		AE9CF5872BB37D33006DB1FD /* ProductCategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCategoryViewModel.swift; sourceTree = "<group>"; };
 		AEA017AC2BAB1E2A00AC1C70 /* AsteriskBank.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AsteriskBank.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA017AF2BAB1E2A00AC1C70 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AEA017B12BAB1E2A00AC1C70 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		AEA017B32BAB1E2A00AC1C70 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		AEA017B32BAB1E2A00AC1C70 /* ProductsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsVC.swift; sourceTree = "<group>"; };
 		AEA017B62BAB1E2A00AC1C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AEA017B82BAB1E3600AC1C70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEA017BB2BAB1E3600AC1C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +63,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AE480CC32BBAD6AA00FC56E9 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				AEA017B82BAB1E3600AC1C70 /* Assets.xcassets */,
+				AE480CC42BBAD6C800FC56E9 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		AE480CC42BBAD6C800FC56E9 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				AE4FBC9F2BBC363D00AD3DDC /* SpaceGrotesk-Bold.ttf */,
+				AE4FBCA02BBC363D00AD3DDC /* SpaceGrotesk-Light.ttf */,
+				AE4FBC9D2BBC363D00AD3DDC /* SpaceGrotesk-Medium.ttf */,
+				AE4FBC9E2BBC363D00AD3DDC /* SpaceGrotesk-Regular.ttf */,
+				AE4FBCA12BBC363D00AD3DDC /* SpaceGrotesk-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		AE9CF5892BB37D5A006DB1FD /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -77,17 +112,19 @@
 		AEA017AE2BAB1E2A00AC1C70 /* AsteriskBank */ = {
 			isa = PBXGroup;
 			children = (
+				AE480CC32BBAD6AA00FC56E9 /* Resources */,
 				AE9CF5892BB37D5A006DB1FD /* Model */,
 				AE9CF5832BB36F37006DB1FD /* products.json */,
 				AEFE87452BAC4C2600BED1B7 /* ProductCell */,
 				AEA017AF2BAB1E2A00AC1C70 /* AppDelegate.swift */,
 				AEA017B12BAB1E2A00AC1C70 /* SceneDelegate.swift */,
-				AEA017B32BAB1E2A00AC1C70 /* ViewController.swift */,
+				AEA017B32BAB1E2A00AC1C70 /* ProductsVC.swift */,
 				AEA017B52BAB1E2A00AC1C70 /* Main.storyboard */,
-				AEA017B82BAB1E3600AC1C70 /* Assets.xcassets */,
 				AEA017BA2BAB1E3600AC1C70 /* LaunchScreen.storyboard */,
 				AEA017BD2BAB1E3600AC1C70 /* Info.plist */,
 				AE9CF5852BB375D3006DB1FD /* ProductLoader.swift */,
+				AE480CBF2BBACF0400FC56E9 /* CorneredView.swift */,
+				AE480CC12BBAD51200FC56E9 /* ProductDetailsVC.swift */,
 			);
 			path = AsteriskBank;
 			sourceTree = "<group>";
@@ -160,7 +197,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				AE9CF5842BB36F37006DB1FD /* products.json in Resources */,
+				AE4FBCA32BBC363D00AD3DDC /* SpaceGrotesk-Regular.ttf in Resources */,
 				AEA017B92BAB1E3600AC1C70 /* Assets.xcassets in Resources */,
+				AE4FBCA42BBC363D00AD3DDC /* SpaceGrotesk-Bold.ttf in Resources */,
+				AE4FBCA62BBC363D00AD3DDC /* SpaceGrotesk-SemiBold.ttf in Resources */,
+				AE4FBCA52BBC363D00AD3DDC /* SpaceGrotesk-Light.ttf in Resources */,
+				AE4FBCA22BBC363D00AD3DDC /* SpaceGrotesk-Medium.ttf in Resources */,
 				AEFE87472BAC4C4500BED1B7 /* ProductTableViewCell.xib in Resources */,
 				AEA017BC2BAB1E3600AC1C70 /* Base in Resources */,
 				AEA017B72BAB1E2A00AC1C70 /* Base in Resources */,
@@ -174,8 +216,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AEA017B42BAB1E2A00AC1C70 /* ViewController.swift in Sources */,
+				AEA017B42BAB1E2A00AC1C70 /* ProductsVC.swift in Sources */,
 				AE9CF5882BB37D33006DB1FD /* ProductCategoryViewModel.swift in Sources */,
+				AE480CC22BBAD51200FC56E9 /* ProductDetailsVC.swift in Sources */,
+				AE480CC02BBACF0400FC56E9 /* CorneredView.swift in Sources */,
 				AEFE87492BAC4C6000BED1B7 /* ProductTableViewCell.swift in Sources */,
 				AE9CF5862BB375D3006DB1FD /* ProductLoader.swift in Sources */,
 				AEA017B02BAB1E2A00AC1C70 /* AppDelegate.swift in Sources */,
