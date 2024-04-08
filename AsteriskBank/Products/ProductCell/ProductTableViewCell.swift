@@ -1,4 +1,5 @@
 import UIKit
+import SDWebImage
 
 class ProductTableViewCell: UITableViewCell {
 
@@ -25,7 +26,9 @@ class ProductTableViewCell: UITableViewCell {
     func configure(
         viewModel: ProductViewModel
     ) {
-        productImageView.image = UIImage(named: viewModel.imageName)
+        productImageView.sd_setImage(
+            with: URL(string: viewModel.imageUrl)
+        )
         titleLbl.text = viewModel.title
         descriptionLbl.text = viewModel.description
     }

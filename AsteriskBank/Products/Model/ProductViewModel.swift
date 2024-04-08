@@ -1,15 +1,15 @@
 import Foundation
 
-struct ProductViewModel: Codable {
+struct ProductViewModel {
     let title: String
     let description: String
-    let imageName: String
+    let imageUrl: String
     let category: String
     
-    init(title: String, description: String, imageName: String, category: String) {
+    init(title: String, description: String, imageUrl: String, category: String) {
         self.title = title
         self.description = description
-        self.imageName = imageName
+        self.imageUrl = imageUrl
         self.category = category
     }
 }

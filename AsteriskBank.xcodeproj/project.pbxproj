@@ -23,6 +23,10 @@
 		AEA017B72BAB1E2A00AC1C70 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AEA017B62BAB1E2A00AC1C70 /* Base */; };
 		AEA017B92BAB1E3600AC1C70 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA017B82BAB1E3600AC1C70 /* Assets.xcassets */; };
 		AEA017BC2BAB1E3600AC1C70 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = AEA017BB2BAB1E3600AC1C70 /* Base */; };
+		AECE15CC2BC34E1300938808 /* ProductsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE15CB2BC34E1300938808 /* ProductsViewModel.swift */; };
+		AECE15D22BC3536B00938808 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = AECE15D12BC3536B00938808 /* Alamofire */; };
+		AECE15D42BC3F1C900938808 /* ProductRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AECE15D32BC3F1C900938808 /* ProductRepository.swift */; };
+		AECE15D72BC3FA5700938808 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = AECE15D62BC3FA5700938808 /* SDWebImage */; };
 		AEFE87472BAC4C4500BED1B7 /* ProductTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AEFE87462BAC4C4500BED1B7 /* ProductTableViewCell.xib */; };
 		AEFE87492BAC4C6000BED1B7 /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE87482BAC4C6000BED1B7 /* ProductTableViewCell.swift */; };
 		AEFE874B2BAC520400BED1B7 /* ProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFE874A2BAC520400BED1B7 /* ProductViewModel.swift */; };
@@ -47,6 +51,8 @@
 		AEA017B82BAB1E3600AC1C70 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEA017BB2BAB1E3600AC1C70 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AEA017BD2BAB1E3600AC1C70 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AECE15CB2BC34E1300938808 /* ProductsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsViewModel.swift; sourceTree = "<group>"; };
+		AECE15D32BC3F1C900938808 /* ProductRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRepository.swift; sourceTree = "<group>"; };
 		AEFE87462BAC4C4500BED1B7 /* ProductTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductTableViewCell.xib; sourceTree = "<group>"; };
 		AEFE87482BAC4C6000BED1B7 /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		AEFE874A2BAC520400BED1B7 /* ProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductViewModel.swift; sourceTree = "<group>"; };
@@ -57,6 +63,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AECE15D72BC3FA5700938808 /* SDWebImage in Frameworks */,
+				AECE15D22BC3536B00938808 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,21 +120,55 @@
 		AEA017AE2BAB1E2A00AC1C70 /* AsteriskBank */ = {
 			isa = PBXGroup;
 			children = (
+				AECE15CF2BC34E7800938808 /* Service */,
+				AECE15CD2BC34E5900938808 /* Util */,
+				AECE15CA2BC34DFD00938808 /* Products */,
 				AE480CC32BBAD6AA00FC56E9 /* Resources */,
-				AE9CF5892BB37D5A006DB1FD /* Model */,
 				AE9CF5832BB36F37006DB1FD /* products.json */,
-				AEFE87452BAC4C2600BED1B7 /* ProductCell */,
 				AEA017AF2BAB1E2A00AC1C70 /* AppDelegate.swift */,
 				AEA017B12BAB1E2A00AC1C70 /* SceneDelegate.swift */,
-				AEA017B32BAB1E2A00AC1C70 /* ProductsVC.swift */,
 				AEA017B52BAB1E2A00AC1C70 /* Main.storyboard */,
 				AEA017BA2BAB1E3600AC1C70 /* LaunchScreen.storyboard */,
 				AEA017BD2BAB1E3600AC1C70 /* Info.plist */,
-				AE9CF5852BB375D3006DB1FD /* ProductLoader.swift */,
-				AE480CBF2BBACF0400FC56E9 /* CorneredView.swift */,
 				AE480CC12BBAD51200FC56E9 /* ProductDetailsVC.swift */,
 			);
 			path = AsteriskBank;
+			sourceTree = "<group>";
+		};
+		AECE15CA2BC34DFD00938808 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE9CF5892BB37D5A006DB1FD /* Model */,
+				AEFE87452BAC4C2600BED1B7 /* ProductCell */,
+				AEA017B32BAB1E2A00AC1C70 /* ProductsVC.swift */,
+				AECE15CB2BC34E1300938808 /* ProductsViewModel.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
+		AECE15CD2BC34E5900938808 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AECE15CE2BC34E5E00938808 /* UIView */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AECE15CE2BC34E5E00938808 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				AE480CBF2BBACF0400FC56E9 /* CorneredView.swift */,
+			);
+			path = UIView;
+			sourceTree = "<group>";
+		};
+		AECE15CF2BC34E7800938808 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AE9CF5852BB375D3006DB1FD /* ProductLoader.swift */,
+				AECE15D32BC3F1C900938808 /* ProductRepository.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		AEFE87452BAC4C2600BED1B7 /* ProductCell */ = {
@@ -154,6 +196,10 @@
 			dependencies = (
 			);
 			name = AsteriskBank;
+			packageProductDependencies = (
+				AECE15D12BC3536B00938808 /* Alamofire */,
+				AECE15D62BC3FA5700938808 /* SDWebImage */,
+			);
 			productName = AsteriskBank;
 			productReference = AEA017AC2BAB1E2A00AC1C70 /* AsteriskBank.app */;
 			productType = "com.apple.product-type.application";
@@ -182,6 +228,10 @@
 				Base,
 			);
 			mainGroup = AEA017A32BAB1E2A00AC1C70;
+			packageReferences = (
+				AECE15D02BC3536B00938808 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				AECE15D52BC3FA5700938808 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = AEA017AD2BAB1E2A00AC1C70 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -223,7 +273,9 @@
 				AEFE87492BAC4C6000BED1B7 /* ProductTableViewCell.swift in Sources */,
 				AE9CF5862BB375D3006DB1FD /* ProductLoader.swift in Sources */,
 				AEA017B02BAB1E2A00AC1C70 /* AppDelegate.swift in Sources */,
+				AECE15D42BC3F1C900938808 /* ProductRepository.swift in Sources */,
 				AEA017B22BAB1E2A00AC1C70 /* SceneDelegate.swift in Sources */,
+				AECE15CC2BC34E1300938808 /* ProductsViewModel.swift in Sources */,
 				AEFE874B2BAC520400BED1B7 /* ProductViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -447,6 +499,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AECE15D02BC3536B00938808 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+		AECE15D52BC3FA5700938808 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.19.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AECE15D12BC3536B00938808 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AECE15D02BC3536B00938808 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		AECE15D62BC3FA5700938808 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AECE15D52BC3FA5700938808 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AEA017A42BAB1E2A00AC1C70 /* Project object */;
 }

@@ -4,19 +4,13 @@ class ProductsVC: UIViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     @IBOutlet weak var tableView: UITableView!
-
-    private var categories: [ProductCategoryViewModel] = []
-    private var currentCategoryIndex: Int = 0
     
-    private var currentCategory: ProductCategoryViewModel {
-        categories[currentCategoryIndex]
-    }
-    
-    private var loader = ProductLoader()
+    private let viewModel = ProductsViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        categories = provideCategories()
+        
+        viewModel.delegate = self
 
         configureTableView()
         configureSegmentedControl()
@@ -25,22 +19,26 @@ class ProductsVC: UIViewController {
     func configureSegmentedControl() {
         segmentedControl.removeAllSegments()
 
-        for (index, category) in categories.enumerated() {
+        loadSegments()
+        
+        segmentedControl.addTarget(self, action: #selector(onSegmentControlIndexChanged), for: .valueChanged)
+    }
+    
+    private func loadSegments() {
+        for (index, category) in viewModel.categories.enumerated() {
             segmentedControl.insertSegment(
                 withTitle: category.title,
                 at: index,
                 animated: false
             )
         }
-
-        segmentedControl.selectedSegmentIndex = 0
         
-        segmentedControl.addTarget(self, action: #selector(onSegmentControlIndexChanged), for: .valueChanged)
+        segmentedControl.selectedSegmentIndex = 0
     }
     
     @objc
     private func onSegmentControlIndexChanged() {
-        currentCategoryIndex = segmentedControl.selectedSegmentIndex
+        viewModel.didChangeSelectedIndex(segmentedControl.selectedSegmentIndex)
         tableView.reloadData()
     }
 
@@ -50,26 +48,12 @@ class ProductsVC: UIViewController {
         tableView.delegate = self
         tableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductTableViewCell")
     }
-    
-    private func provideCategories() -> [ProductCategoryViewModel] {
-        let products = loader.load()
-        
-        let productCategories: [String] = ["Debit", "Deposit", "Credit", "Loan"]
-        
-        var categories: [String: [ProductViewModel]] = [:]
-        
-        for category in productCategories {
-            categories[category] = []
-        }
-        
-        for product in products {
-            categories[product.categoryTitle]?.append(product)
-        }
-        
-        return productCategories.compactMap {
-            guard let products = categories[$0] else { return nil }
-            return ProductCategoryViewModel(title: $0, products: products)
-        }
+}
+
+extension ProductsVC: ProductsViewModelDelegate {
+    func didLoadCategories() {
+        loadSegments()
+        tableView.reloadData()
     }
 }
 
@@ -77,13 +61,13 @@ extension ProductsVC: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int { 1 }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return currentCategory.products.count
+        viewModel.currentCategory?.products.count ?? 0
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as? ProductTableViewCell {
-
-            let product = currentCategory.products[indexPath.row]
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "ProductTableViewCell", for: indexPath) as? ProductTableViewCell, let products = viewModel.currentCategory?.products {
+            
+            let product = products[indexPath.row]
 
             cell.configure(viewModel: product)
             
@@ -91,7 +75,7 @@ extension ProductsVC: UITableViewDataSource {
                 cell.setFirst()
             }
             
-            if indexPath.row == currentCategory.products.count - 1 {
+            if indexPath.row == products.count - 1 {
                 cell.setLast()
             }
 
